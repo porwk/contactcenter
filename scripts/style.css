@@ -1,0 +1,116 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+
+/* Container do formulário */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do formulário */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo dos grupos de campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo dos labels */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo dos campos de seleção e entrada */
+select, input, button {
+    width: 100%; /* Garantindo que todos os campos tenham a mesma largura */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo do tamanho do campo */
+}
+
+/* Ajuste específico para o campo de texto */
+input[type="text"] {
+    width: 100%; /* Garante que o campo "Cliente (ID + Nome)" tenha a mesma largura que os outros */
+}
+
+/* Estilo do botão de envio */
+button {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+/* Estilo do botão Dark Mode (discreto, abaixo do botão de envio) */
+#dark-mode-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px; /* Botão menor e mais discreto */
+    cursor: pointer;
+    font-size: 14px; /* Tamanho de fonte ajustado */
+    display: block; /* Faz o botão ocupar a linha inteira, mas sem ser tão largo */
+    margin: 20px auto 0; /* Espaço superior de 20px e centraliza o botão */
+    width: auto; /* Ajuste o botão para ter um tamanho discreto */
+    text-align: center; /* Centraliza o conteúdo do botão */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+/* Estilo do tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f9;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode h1 {
+    color: #f4f4f9;
+}
+
+body.dark-mode .form-group label {
+    color: #f4f4f9;
+}
+
+body.dark-mode select,
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #333;
+    color: #f4f4f9;
+    border: 1px solid #555;
+}
+
+body.dark-mode button {
+    background-color: #5cb85c;
+}
+
+body.dark-mode button:hover {
+    background-color: #4cae4c;
+}

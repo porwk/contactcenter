@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Contact Center</title>
+    <link rel="stylesheet" href="scripts/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Center</h1>
+        <form id="contact-form" method="POST" action="submit.php">
+            <!-- Token CSRF -->
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
+            <!-- Seção de Serviço Realizado -->
+            <div class="form-group">
+                <label for="servico">Qual Serviço realizado?</label>
+                <select name="servico" id="servico" required>
+                    <option value="">Selecione</option>
+                    <option>Upgrade</option>
+                    <option>Renovação de plano</option>
+                    <option>Atualização de plano</option>
+                    <option>Reversão de Cancelamento</option>
+                    <option>Venda A La Carte</option>
+                    <option>Migração</option>
+                </select>
+            </div>
+
+            <!-- Seção de Colaborador -->
+            <div class="form-group">
+                <label for="colaborador">Colaborador</label>
+                <select name="colaborador" id="colaborador" required>
+                    <option value="">Selecione</option>
+                    <option>Amanda Neves Santana</option>
+                    <option>Celson Madson Neres Assis</option>
+                    <option>Daniel Cardoso Leão Pereira</option>
+                    <option>Danielle Lorranne De Oliveira</option>
+                    <option>Eric Martins Celestino</option>
+                    <option>Gustavo Alves Ramos</option>
+                    <option>Leonardo Cesar de Souza</option>
+                    <option>Lucas Daniel Ribeiro Santana</option>
+                    <option>Marcos Vieira da Silva</option>
+                    <option>Paulo Henrique Fagundes Bezerra</option>
+                    <option>Pedro Lucas Vilela Teles</option>
+                    <option>Thiago da Silva</option>
+                    <option>Ryan Brenno Rocha Gonçalves</option>
+                    <option>Vanessa Perim Moreira</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+
+            <!-- Seção de Plano -->
+            <div class="form-group">
+                <label for="plano">Plano</label>
+                <select name="plano" id="plano" required>
+                    <option value="">Selecione</option>
+                    <option>200 MEGA (100+100MB)</option>
+                    <option>550 MEGA (275+275MB)</option>
+                    <option>600 MEGA (300+300MB)</option>
+                    <option>750 MEGA (375+375MB)</option>
+                    <option>1GIGA (500+500MB)</option>
+                    <option>7 MEGA (Wireless)</option>
+                    <option>10 MEGA (Wireless)</option>
+                    <option>15 MEGA (Wireless)</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+
+            <!-- Seção Cliente (ID + Nome) -->
+            <div class="form-group">
+                <label for="cliente">Cliente (ID + Nome)</label>
+                <input type="text" name="cliente" id="cliente" required placeholder="Exemplo: 123 - João Silva">
+            </div>
+
+            <!-- Seção Equipamento -->
+            <div class="form-group">
+                <label for="equipamento">Necessário troca de equipamento?</label>
+                <select name="equipamento" id="equipamento" required>
+                    <option value="">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </div>
+
+            <!-- Seção de Aceite -->
+            <div class="form-group">
+                <label for="aceite">Aceite</label>
+                <select name="aceite" id="aceite" required>
+                    <option value="">Selecione</option>
+                    <option>Por Voz</option>
+                    <option>Assinatura digital</option>
+                </select>
+            </div>
+
+            <!-- Botão de Envio -->
+            <button type="submit" id="submit-button">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Botão Dark Mode -->
+    <button id="dark-mode-toggle">
+        <span id="dark-mode-icon">🌙</span>
+    </button>
+
+    <!-- Incluindo o arquivo JavaScript -->
+    <script src="scripts/app.js"></script>
+</body>
+</html>
